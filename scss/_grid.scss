@@ -1,21 +1,4 @@
-.gridrowfull{
-    width: 100%;
-}
-html{
-    color: $white;
-    background-color: $black;
-    font-weight: 300;
-    line-height: 1.618;
-    font-size: $basefontsizemobile;
-    @media(min-width: $tablet){
-      font-size: $basefontsizetablet;
-    }
-    @media(min-width: $desktop){
-      font-size: $basefontsizedesktop;
-    }
-}
-
-.gridrow{
+.row{
     width: $gridwidth;
     margin: 0 auto;
     @media(min-width: $tablet){
@@ -28,8 +11,7 @@ html{
         width: $gridwidthdlg;
     }
 }
-
-.gridrowfull, .gridrow{
+.row{
     display: flex;
     flex-wrap: wrap;
     .col{
@@ -47,9 +29,6 @@ html{
         }
         .offset-#{$i} {
             margin-left: percentage($i/$gridcolumns);
-        }
-        .order-#{$i}{
-            order: $i;
         }
     }
     @media(min-width: $tablet){
@@ -72,9 +51,6 @@ html{
             .offset-t-#{$i} {
                 margin-left: percentage($i/$gridcolumns);
             }
-            .order-t-#{$i}{
-                order: $i;
-            }
         }
     }
     @media(min-width: $desktop){
@@ -96,9 +72,6 @@ html{
             }
             .offset-d-#{$i} {
                 margin-left: percentage($i/$gridcolumns);
-            }
-            .order-d-#{$i}{
-                order: $i;
             }
         }
     }

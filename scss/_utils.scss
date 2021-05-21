@@ -1,3 +1,22 @@
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto Mono';
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto Mono';
+}
+
+main{
+    margin-top: 40px;
+}
+
+
 /* ================================== */
 /* ======= MARGINS / PADDINGS ======= */
 /* ================================== */
@@ -32,10 +51,5 @@ $sizes: (
 /* ==================== */
 .card{
     @extend .margintopfull;
-    width: 100%;
-    height: 15vh;
-    background-color: $primary;
-    @media(min-width: $desktop){
-        height: 30vh;
-    }
+    box-shadow: 0 $gridgutter / 4 $gridgutter / 2 rgba($white, 0.1);
 }

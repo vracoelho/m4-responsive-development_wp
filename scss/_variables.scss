@@ -16,6 +16,10 @@ $gridwidtht: calc(90% - #{$gridgutter});
 $gridwidthd: $desktop - $gridgutter * 2;
 $gridwidthdlg: $desktoplg - $gridgutter * 3;
 
+$bodyfont: "Roboto+Mono";
+$bodyfontfamily: "Roboto Mono";
+$bodyfontweights: "300;400;700";
+
 $basefontsizemobile: $gridgutter / 3 * 2;
 $basefontsizetablet: $gridgutter / 3 * 2 + 1;
 $basefontsizedesktop: $gridgutter / 3 * 2 + 2;

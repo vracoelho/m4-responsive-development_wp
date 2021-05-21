@@ -1,0 +1,47 @@
+.header {
+    background: rgba(35, 35, 35, 0.6);
+    position: fixed;
+    padding: 50px 40px;
+    max-height: 124px;
+    width: 100%;
+    .row{
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        .logo{
+            font-weight: 700;
+            line-height: 21,1px;
+        }
+        .hamburguer{
+            width: unset;
+        }
+    }
+    input{
+        position: absolute;
+        display: block;
+        z-index: 10000;
+        height: 60px;
+        width: 60px;
+        opacity: 0;
+        top: -16px;
+        right: -4px;
+        cursor: pointer;
+    }
+}
+
+.menu{
+
+    .bar-1, .bar-2, .bar-3{
+        background: white;
+        height: 2px;
+        width: 32px;
+        display: block;
+    }
+    .bar-2, .bar-3{
+        margin-top: 10px;
+    }
+    .menu-list{
+        display: none;
+    }
+}
