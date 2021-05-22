@@ -1,25 +1,10 @@
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: 'Roboto Mono';
-}
 
-p{
-    font-size: 16px;
-    font-weight: 400;
-    font-family: 'Roboto Mono';
-}
-
-main{
-    margin-top: 40px;
-}
 
 
 /* ================================== */
 /* ======= MARGINS / PADDINGS ======= */
 /* ================================== */
+
 $sizes: (
     'none': 0,
     'full': $gridgutter, 
@@ -49,7 +34,14 @@ $sizes: (
 /* ==================== */
 /* ======= CARD ======= */
 /* ==================== */
+
 .card{
     @extend .margintopfull;
     box-shadow: 0 $gridgutter / 4 $gridgutter / 2 rgba($white, 0.1);
 }
+
+/* ==================== */
+/* ======= Abnimate ======= */
+/* ==================== */
+
+

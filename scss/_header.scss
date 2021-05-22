@@ -1,47 +1,123 @@
-.header {
-    background: rgba(35, 35, 35, 0.6);
-    position: fixed;
-    padding: 50px 40px;
-    max-height: 124px;
-    width: 100%;
-    .row{
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-        position: relative;
-        .logo{
-            font-weight: 700;
-            line-height: 21,1px;
-        }
-        .hamburguer{
-            width: unset;
-        }
-    }
-    input{
-        position: absolute;
-        display: block;
+body{
+    .header {
+        background-color: rgba($graydark, 0.6);
+        position: fixed;
+        padding: $gridgutter * 1.5 0;
+        box-sizing: border-box;
+        max-height: 124px;
+        top: 0;
+        left: 0;
+        width: 100%;
         z-index: 10000;
-        height: 60px;
-        width: 60px;
-        opacity: 0;
-        top: -16px;
-        right: -4px;
-        cursor: pointer;
+        &.smaller{
+            padding: $gridgutter / 3 * 2 0;
+        }
+        .row{
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+            .logo{
+                font-weight: 700;
+                line-height: $gridgutter * 1.5;
+            }
+            .hamburguer{
+                width: unset;
+            }
+        }
+        input{
+            position: absolute;
+            display: block;
+            z-index: 10001;
+            height: 60px;
+            width: 60px;
+            opacity: 0;
+            top: -16px;
+            right: -4px;
+            cursor: pointer;
+            &:hover {
+                ~span {
+                    background-color: $primary;
+                }
+            }
+            ~span {
+                z-index: 2;
+                width: 32px;
+                height: 2px;
+                display: block;
+                background-color: white;
+                &:not(:first-child) {
+                    margin-top: 10px;
+                }
+            }
+            &:checked {
+                ~.menu {
+                    display: block;
+                    transform: translate(0, 0);
+                }
+            }
+        }
     }
-}
-
-.menu{
-
-    .bar-1, .bar-2, .bar-3{
-        background: white;
-        height: 2px;
-        width: 32px;
-        display: block;
-    }
-    .bar-2, .bar-3{
-        margin-top: 10px;
-    }
-    .menu-list{
-        display: none;
+    
+    .nav{
+        .menu{
+            position: fixed;
+            z-index: -1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform-origin: 0% 0%;
+            transform: translate(0, -100%);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+            background-color: #232323;
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: $gridgutter * 3 + 12;
+                font-weight: 700;
+                font-family: $bodyfontfamily;
+            }
+            .menu-list {
+                list-style: none;
+                position: absolute;
+                top: $gridgutter * 7;
+                @media screen and (min-width: $tablet) {
+                    left: 20px;
+                }
+            .menu-item {
+                margin: 40px 0;
+                font-size: $gridgutter * 3 + 12;
+                line-height: 47.48px;
+                font-weight: 700px;
+                @media screen and (min-width: $tablet) {
+                    margin: 60px 0;
+                    font-size: $gridgutter * 3 + 12;
+                    line-height: 94.96px;
+                    }
+                }
+                .menu-item-active {
+                    @extend .menu-item;
+                    margin-top: 0px;
+                    >a {
+                        color: $primary
+                    }
+                }
+            }
+        }
+        .bar-1, .bar-2, .bar-3{
+            background: white;
+            height: 2px;
+            width: 32px;
+            display: block;
+        }
+        .bar-2, .bar-3{
+            margin-top: 10px;
+        }
     }
 }

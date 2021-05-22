@@ -1,3 +1,53 @@
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: $bodyfontfamily;
+}
+
+p{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: $bodyfontfamily;
+    margin: 0 0 $gridgutter / 2 0;
+}
+
+
+/* ================================== */
+/* ============ Hero/Main =========== */
+/* ================================== */
+
+
+main{
+    margin-top: 40px;
+}
+
+
+#hero{
+    margin-top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.cont-1{
+    padding-bottom: $gridgutter * 3 + 6
+}
+
+
+/* ================================== */
+/* ============== ???? ============== */
+/* ================================== */
+
+
+
 aside{
     > h2{
         @extend .uppercase;
@@ -11,6 +61,7 @@ aside{
         }
     }
 }
+
 article{
     h1, & > p{
         margin:0;
@@ -35,8 +86,6 @@ article{
     }
 }
 
-
-
 #outro-video-aqui{
     position: relative;
     height: 0;
@@ -55,17 +104,3 @@ article{
     width: 100%;
     height: auto
 }
-
-
-/* Hero */
-
-#hero{
-    margin-top: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-}
-
-
-
