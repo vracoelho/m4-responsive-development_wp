@@ -35,10 +35,44 @@ $sizes: (
 /* ======= CARD ======= */
 /* ==================== */
 
-.card{
+.card {
     @extend .margintopfull;
     box-shadow: 0 $gridgutter / 4 $gridgutter / 2 rgba($white, 0.1);
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }
+
+.is-card {
+    margin-bottom: $gridgutter;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    &.cards {
+        margin-top: $gridgutter * 4 + 6;
+        margin-bottom: $gridgutter;
+    }
+}
+
+
+
+.content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    &:hover {
+        >.content {
+            display: block;
+        }
+    }
+}
+
 
 /* ==================== */
 /* ======= Abnimate ======= */

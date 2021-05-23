@@ -4,6 +4,9 @@ a{
     font-size: 1rem;
     font-weight: 400;
     font-family: $bodyfontfamily;
+    &:hover {
+        color: $primary;
+    }
 }
 
 p{
@@ -12,6 +15,27 @@ p{
     font-family: $bodyfontfamily;
     margin: 0 0 $gridgutter / 2 0;
 }
+
+ul {
+    margin: 0;
+}
+
+.right{
+    text-align: end;
+}
+
+.prev-next {
+    margin-top: $gridgutter * 2;
+    margin-left: $gridgutter / 2 * 3;
+    margin-right: $gridgutter / 2 * 3;
+    margin-bottom: $gridgutter * 2;
+    a {
+        font-weight: 1.1rem;
+        font-size: $gridgutter - 2;
+        line-height: $gridgutter + 4;
+    }
+}
+
 
 
 /* ================================== */
@@ -40,6 +64,10 @@ main{
 .cont-1{
     padding-bottom: $gridgutter * 3 + 6
 }
+
+
+
+
 
 
 /* ================================== */

@@ -23,3 +23,9 @@ $bodyfontweights: "300;400;700";
 $basefontsizemobile: $gridgutter / 3 * 2;
 $basefontsizetablet: $gridgutter / 3 * 2 + 1;
 $basefontsizedesktop: $gridgutter / 3 * 2 + 2;
+
+$h-header:$gridgutter * 6 + 4;
+$h-footer:$gridgutter * 4 + 4;
+$light:300;
+$normal:400;
+$bold:700;
