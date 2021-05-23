@@ -137,7 +137,7 @@
     padding-top: $gridgutter * 4 + 4;
 }
 
-.graphic-header{
+.graphic-header, .contact-header{
     position: absolute;
     padding: $gridgutter * 1.5 0;
     box-sizing: border-box;
@@ -145,7 +145,7 @@
     top: 0;
     left: 0;
     width: 100%;  
-    .menu-selector {
+    .sel-text-1 {
         @media (max-width: $tablet) {
             margin-left: $gridgutter/2;
         }
@@ -163,6 +163,20 @@
             font-size: 1.5rem;
             margin-bottom: $gridgutter / 2;
             line-height: 2rem;
+        }
+    }
+    .sel-text-2{
+        p {
+            margin-top: $gridgutter * 4;
+            line-height: 1.5rem;
+            font-size: 1rem;
+        }
+    }
+    .sel-text-3{
+        p {
+            margin-top: $gridgutter * 2;
+            line-height: 1.5rem;
+            font-size: 1rem;
         }
     }
 }
