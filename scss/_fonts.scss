@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=#{$bodyfont}:wght@#{$bodyfontweights}&display=swap);
 
+/* ======================== */
+/* ===== HTML / FONTS ===== */
+/* ======================== */
+
 html{
     font-family: $bodyfontfamily, sans-serif;
     color: $white;
@@ -19,6 +23,7 @@ html{
 /* ======================== */
 /* ======= HEADINGS ======= */
 /* ======================== */
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
   font-family: $bodyfontfamily, sans-serif;
   font-weight: 700;
@@ -32,6 +37,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
 /* ==================== */
 /* ======= TEXT ======= */
 /* ==================== */
+
 .textleft{
   text-align: left;
 }
@@ -52,4 +58,8 @@ small, .small{
 
 .uppercase{
   text-transform: uppercase;
+}
+
+.right{
+  text-align: end;
 }

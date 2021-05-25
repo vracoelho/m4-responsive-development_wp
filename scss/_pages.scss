@@ -1,52 +1,6 @@
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: $bodyfontfamily;
-    &:hover {
-        color: $primary;
-    }
-}
-
-p{
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: $bodyfontfamily;
-    margin: 0 0 $gridgutter / 2 0;
-}
-
-ul {
-    margin: 0;
-}
-
-.right{
-    text-align: end;
-}
-
-.prev-next {
-    margin-top: $gridgutter * 2;
-    margin-left: $gridgutter / 2 * 3;
-    margin-right: $gridgutter / 2 * 3;
-    margin-bottom: $gridgutter * 2;
-    a {
-        font-weight: 1.1rem;
-        font-size: $gridgutter - 2;
-        line-height: $gridgutter + 4;
-    }
-}
-
-
-
 /* ================================== */
 /* ============ Hero/Main =========== */
 /* ================================== */
-
-
-main{
-    margin-top: 40px;
-}
-
 
 #hero{
     margin-top: 0;
@@ -59,22 +13,6 @@ main{
     background-size: cover;
     position: relative;
 }
-
-
-.cont-1{
-    padding-bottom: $gridgutter * 3 + 6
-}
-
-
-
-
-
-
-/* ================================== */
-/* ============== ???? ============== */
-/* ================================== */
-
-
 
 aside{
     > h2{
@@ -114,13 +52,52 @@ article{
     }
 }
 
-#contact {
-    margin-top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative; 
+/* ============================ */
+/* =========== LINKS ========== */
+/* ============================ */
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: $bodyfontfamily;
+    &:hover {
+        color: $primary;
+    &.disabled {
+        pointer-events: none;
+        cursor: default;
+        }
+    }
+}
+
+ul {
+    margin: 0;
+}
+
+/* ============================ */
+/* =========== TEXT ========== */
+/* ============================ */
+
+p{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: $bodyfontfamily;
+    margin: 0 0 $gridgutter / 2 0;
+}
+
+.prev-next {
+    margin-top: $gridgutter * 2;
+    margin-left: $gridgutter / 2 * 3;
+    margin-right: $gridgutter / 2 * 3;
+    margin-bottom: $gridgutter * 2;
+    a {
+        font-weight: 1.1rem;
+        font-size: $gridgutter - 2;
+        line-height: $gridgutter + 4;
+    }
+}
+
+.cont-1{
+    padding-bottom: $gridgutter * 3 + 6
 }

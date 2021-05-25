@@ -1,4 +1,3 @@
-
 .header {
     background-color: rgba($graydark, 0.6);
     position: fixed;
@@ -69,8 +68,7 @@
                 transform-origin: 0% 100%;
             }
             ~.menu {
-                display: block;
-                transform: translate(0, 0);
+                top:0;
             }
         }
     }
@@ -85,13 +83,9 @@
         justify-content: center;
         width: 100%;
         height: 100vh;
-        top: 0;
-        right: 0;
-        bottom: 0;
+        top: -100vh;
         left: 0;
-        transform-origin: 0% 0%;
-        transform: translate(0, -100%);
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+        transition: top 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
         background-color: #232323;
         a{
             text-decoration: none;
@@ -105,13 +99,13 @@
         }
         .menu-list {
             list-style: none;
-            position: absolute;
             top: $gridgutter * 7;
+            padding-left: 0;
             @media screen and (min-width: $tablet) {
-                left: 20px;
+                left: 0px;
             }
             @media (min-width: $desktop) {
-                left: 40px;
+                left: 0px;
             }
         .menu-item {
             margin: 40px 0;
@@ -149,19 +143,11 @@
     }
 }
 
-
-#graphic {
-    padding-top: $gridgutter * 4 + 4;
-}
-
-.graphic-header, .contact-header{
-    position: absolute;
-    padding: $gridgutter * 1.5 0;
+.graphic-header, .contact-header {
     box-sizing: border-box;
+    width: 100%;
     padding-top: $gridgutter * 6 + 4;
-    top: 0;
-    left: 0;
-    width: 100%;  
+    margin-bottom: -$gridgutter;
     .sel-text-1 {
         @media (max-width: $tablet) {
             margin-left: $gridgutter/2;
@@ -198,3 +184,9 @@
     }
 }
 
+#contact {
+    margin-top: 0;
+    min-height: calc(100vh - #{$gridgutter * 4 + 4};
+    display: flex;
+    flex-direction: column;
+}

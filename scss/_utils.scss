@@ -1,6 +1,3 @@
-
-
-
 /* ================================== */
 /* ======= MARGINS / PADDINGS ======= */
 /* ================================== */
@@ -35,13 +32,51 @@ $sizes: (
 /* ======= CARD ======= */
 /* ==================== */
 
+
 .card {
     @extend .margintopfull;
-    box-shadow: 0 $gridgutter / 4 $gridgutter / 2 rgba($white, 0.1);
+    position: relative;
+    overflow: hidden;
     img {
         display: block;
         width: 100%;
         height: auto;
+    }
+    .content {
+        display: none;
+        position: absolute;
+        top: $gridgutter;
+        left: $gridgutter;
+        z-index: 3;
+    }
+    p:first-child {
+        margin: 0;
+        font-weight: 400;
+        font-size: $gridgutter;
+        line-height: $gridgutter + 4;
+        @media (min-width: $tablet) {
+            font-size: $gridgutter + 4;
+            line-height: $gridgutter * 1.5;
+        }
+    }
+    p:last-child {
+        margin: 0;
+        font-weight: 300;
+        font-size: $gridgutter - 4;
+        line-height: $gridgutter + 2;
+        @media (min-width: $tablet) {
+            font-size: $gridgutter;
+            line-height: $gridgutter + 6;
+        }
+    }
+    &:hover {
+        .content {
+            display: block;
+            color: $white;
+        }
+    }
+    .is-card-is{
+        box-shadow: 0 $gridgutter / 4 $gridgutter / 2 rgba($white, 0.1); 
     }
 }
 
@@ -52,30 +87,33 @@ $sizes: (
         width: 100%;
         height: auto;
     }
-    &.cards {
-        margin-top: $gridgutter * 4 + 6;
-        margin-bottom: $gridgutter;
-    }
 }
 
+/* ==================== */
+/* ====== OTHERS ====== */
+/* ==================== */
 
-
-.content {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    &:hover {
-        >.content {
-            display: block;
-        }
-    }
+.imgfit{
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
+iframe{
+    width: 100%;
+    height: 30vh;
+}
 
-/* ==================== */
-/* ======= Abnimate ======= */
-/* ==================== */
-
-
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
+}
